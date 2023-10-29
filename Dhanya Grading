@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main ()
+{
+int Acc,Math,Eco,Bcc,Eng,Lang,total;
+double avg;
+
+printf("Enter Marks of 6 subjects: ");
+scanf ("%d%d%d%d%d%d",&Acc,&Math,&Eco,&Bcc,&Eng,&Lang);
+
+total= Acc+Math+Eco+Bcc+Eng+Lang;
+printf("Total Marks: %d\n",total);
+
+avg=total/6.0;
+printf("Average Marks: %.2lf\n",avg);
+
+if(avg<=40)
+{goto a;}
+else if(avg>=41 && avg<=50)
+{goto b;}
+else if(avg>=51 && avg<=60)
+{goto c;}
+else if(avg>=61 && avg<=85)
+{goto d;}
+else if(avg>=86 && avg<=100)
+{goto e;}
+
+a:printf("Fail\n");
+return 0;
+b:printf("Third Class\n");
+return 0;
+c:printf("Second Class\n");
+return 0;
+d:printf("First Class\n");
+return 0;
+e:printf("Distinction \n");
+return 0;
+
+return 0;
+}
